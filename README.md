@@ -16,9 +16,9 @@ The plot below shows the QC metrics for the filtered data. QC is performed to fi
 - Cells with high percentage of mitochondrial transcript are indicative of dying or poor quality cells.
 Therefore, these conditions were used to filter out poor quality cells which were assessed though various metric visualizations.
 
-![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/e8cf4784-c8ac-4efa-8a0d-09d4b9e2e8b4)
+<img width="314" alt="image" src="https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/a9b534d4-bf80-4d92-99c0-d1a6905afbb0">
 
-The figure shows all cells with a percentage of mitochondrial reads lower than 10% and cells with features more than 200 and less than 4000 as included for downstream analysis. Fixed thresholds were applied by visualizing the QC metrics to apply to the data.
+The figure visualizes QC metrics. Form the plot, a threshold for each metric was set. Cells with a percentage of mitochondrial reads lower than 10% and cells with features more than 200 and less than 4000 were decided to be included for downstream analysis. 
 
 #### 2. Normalization 
 Normalization of the data was performed to enable comparison between cells and make more interpretable visualizations.
@@ -26,7 +26,7 @@ Normalization of the data was performed to enable comparison between cells and m
 #### 3. Identifying Highly Variable Features
 Not all features expressed in the cell are significant in terms of biological signal. To include the features that significantly vary from the average expression levels across the cells, these were identified to include downstream and visualized.
 
-![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/185dc2de-187d-452a-94b9-6003fb2e064f)
+![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/5361df52-18bd-4e7c-8466-c277b67083df)
 
 The plot shows the highly variable features in red with the top 10 features labelled. To name a few characteristic features, the second most variable gene TNNI2 encodes the fast-twitch skeletal muscle protein responsible for regulation of striated muscle contraction. TNNC2 gene is encodes another troponin protein complex with 3 subunits also regulating muscle contraction. The top 10 consist of the many features conastituting the various structural and functional muscle cell groups for example ANKRD2 is involved in muscle stress response. They also include proteins interacting with macrophages.
 
