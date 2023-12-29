@@ -56,6 +56,8 @@ After clustering, to provide information about each cluster, we identify markers
 
 ![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/bb12e6d3-f678-4ff3-b6b3-b71649091428)
 
+Individual cluster marker identification was also carried out since this was an exploratory project to unravel the diversity in the skeletal muscle cells. The plot below shows Decorin gene (DCN) as the top expressed in cluster 0. DCN encodes one of the proteins from the leucine-rich family og glycoproteins. 
+
 
 
 
