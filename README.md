@@ -56,7 +56,25 @@ After clustering, to provide information about each cluster, we identify markers
 
 ![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/bb12e6d3-f678-4ff3-b6b3-b71649091428)
 
-Individual cluster marker identification was also carried out since this was an exploratory project to unravel the diversity in the skeletal muscle cells. The plot below shows Decorin gene (DCN) as the top expressed in cluster 0. DCN encodes one of the proteins from the leucine-rich family og glycoproteins. 
+Individual cluster marker identification was also carried out since this was an exploratory project to unravel the diversity in the skeletal muscle cells. The plot below shows Decorin gene (DCN) as the top expressed in cluster 0. DCN encodes one of the proteins from the leucine-rich family of glycoproteins. 
+
+![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/baeca970-21eb-4298-bcaa-70d22217e167)
+
+Cluster 1 has the ACTA2 gene differentially expressed, as shown below. The ACTA2 gene or the Actin Alpha 2, Smooth Muscle gene encodes a actin protein that is highly conserved in eukaryotes and is responsible for cell biological functioning like cell structure and mobility. Mutations in this gene is linked with many diseases including coronary artery disease and stroke.
+
+![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/949c24c4-6638-4fd9-bf8c-f7ce19add1e3)
+
+Another characteristic cluster was the cluster 4 visualized in the two plot below. It is the Apolipoprotein E gene encodes a major apoprotein involved in lipoprotein catabolism. Mutations in this gene are linked to Alzheimer's disease and cardiovascular disease.
+
+![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/803ed806-3d4d-4053-b527-837dde4c91fd)
+
+![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/ad0983d1-11f4-47c9-9eb2-742ff05e0b6d)
+
+
+
+
+
+
 
 
 
