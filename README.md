@@ -70,8 +70,8 @@ Another characteristic cluster was the cluster 4 visualized in the two plot belo
 
 ![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/ad0983d1-11f4-47c9-9eb2-742ff05e0b6d)
 
-
-
+### Conclusion
+Gene expression information for specific cell-types are important in understanding it in terms of the diversity of cell types that exist in samples, here skeletal muscles. This further helps us in the understanding and diagnosis of diseases and answer important molecular biology related questions.
 
 
 
