@@ -70,6 +70,9 @@ Another characteristic cluster was the cluster 4 visualized in the two plot belo
 
 ![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/ad0983d1-11f4-47c9-9eb2-742ff05e0b6d)
 
+### Manual Cell Type Annotation
+Due to the unavailability of a single-cell reference databse for skeletal muscles, manual cell type annotation was carried out through gene overlay plots and marker identification based on gene expression in cluster. This was then compared with and manually labelled using The Human Protein Atlas as the 
+
 ### Conclusion
 Gene expression information for specific cell-types are important in understanding it in terms of the diversity of cell types that exist in samples, here skeletal muscles. This further helps us in the understanding and diagnosis of diseases and answer important molecular biology related questions.
 
