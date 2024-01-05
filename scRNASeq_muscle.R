@@ -98,6 +98,32 @@ muscle.seurat <- RunUMAP(muscle.seurat,
 
 DimPlot(muscle.seurat,
         reduction = "umap")
+
+cell.ann <- c("Fibroblasts",
+              "Smooth Muscle cells",
+              "Cluster2",
+              "Skeletal Myocytes",
+              "Macrophage – Innate Immune Response",
+              "Suprabasal keratinocytes",
+              "Monocytes – Innate Immune Cells",
+              "Very uncertain")
+
+muscle.seurat <- RenameIdents(muscle.seurat,
+                              "0" = "Fibroblasts",
+                              "1" = "Smooth Muscle cells",
+                              "2" = "Cluster2",
+                              "3" = "Skeletal Myocytes",
+                              "4" = "Macrophage – Innate Immune Response",
+                              "5" = "Suprabasal keratinocytes",
+                              "6" = "Monocytes – Innate Immune Cells",
+                              "7" = "Cluster7")
+
+levels(muscle.seurat)
+
+table(Idents(object = muscle.seurat))
+
+DimPlot(muscle.seurat,
+        label = TRUE)
 #extremely heterogenous muscle
 #total of 23 cell clusters
 
@@ -115,28 +141,63 @@ VlnPlot(muscle.seurat,
         features = c(rownames(cluster0.markers)[1],
                      rownames(cluster0.markers)[2]))
 
+FeaturePlot(muscle.seurat,
+            features = "CFD")
+
+#cluster 1
 cluster1.markers <- FindMarkers(muscle.seurat, 
                                 ident.1 = 1,
                                 logfc.threshold = 0.25, 
                                 test.use = "roc", 
                                 only.pos = TRUE)
 
+head(cluster1.markers,
+     n = 5)
+
 VlnPlot(muscle.seurat,
-        features = c(rownames(cluster1.markers)[1],
-                     rownames(cluster1.markers)[2]))
-
-#finding all markers
-muscle.allmarkers <- FindAllMarkers(muscle.seurat,
-                                    only.pos = T,
-                                    min.pct = 0.25,
-                                    logfc.threshold = 0.25)
-
-x <- muscle.allmarkers %>%
-  group_by(cluster) %>% #grouping by cluster
-  top_n(n = 1, wt = avg_log2FC) #visualized by the top gene based on logfc (i.e. higherst expressed gene)
+        features = c(rownames(cluster1.markers)[1]))
 
 FeaturePlot(muscle.seurat,
-            features = x$gene)
+            features = "ACTA2",
+            keep.scale = "feature")
+
+#cluster 2
+cluster2.markers <- FindMarkers(muscle.seurat, 
+                                ident.1 = 2,
+                                logfc.threshold = 0.25, 
+                                test.use = "roc", 
+                                only.pos = TRUE)
+
+head(cluster2.markers,
+     n = 5)
+
+VlnPlot(muscle.seurat,
+        features = c(rownames(cluster2.markers)[1],
+                     rownames(cluster2.markers)[2],
+                     rownames(cluster2.markers)[3],
+                     rownames(cluster2.markers)[4],
+                     rownames(cluster2.markers)[5]))
+
+FeaturePlot(muscle.seurat,
+            features = "IFI27",
+            keep.scale = "feature")
+
+#cluster 3
+cluster3.markers <- FindMarkers(muscle.seurat, 
+                                ident.1 = 3,
+                                logfc.threshold = 0.25, 
+                                test.use = "roc", 
+                                only.pos = TRUE)
+
+head(cluster3.markers,
+     n = 5)
+
+VlnPlot(muscle.seurat,
+        features = c(rownames(cluster3.markers)[1]))
+
+FeaturePlot(muscle.seurat,
+            features = "ACTA1",
+            keep.scale = "feature")
 
 #cluster 4
 cluster4.markers <- FindMarkers(muscle.seurat, 
@@ -145,16 +206,87 @@ cluster4.markers <- FindMarkers(muscle.seurat,
                                 test.use = "roc", 
                                 only.pos = TRUE)
 
+head(cluster4.markers,
+     n = 5)
+
 VlnPlot(muscle.seurat,
-        features = c(rownames(cluster4.markers)[1],
-                     rownames(cluster4.markers)[2]))
+        features = c(rownames(cluster4.markers)[1]))
 
 FeaturePlot(muscle.seurat,
-            features = "TNNT1")
+            features = "APOE")
+
 head(cluster4.markers,
      n = 5)
 which(rownames(cluster4.markers)=="MYL2")
 
+#cluster 5
+cluster5.markers <- FindMarkers(muscle.seurat, 
+                                ident.1 = 5,
+                                logfc.threshold = 0.25, 
+                                test.use = "roc", 
+                                only.pos = TRUE)
+
+head(cluster5.markers,
+     n = 5)
+
+VlnPlot(muscle.seurat,
+        features = c(rownames(cluster5.markers)[1],
+                     rownames(cluster5.markers)[2],
+                     rownames(cluster5.markers)[3],
+                     rownames(cluster5.markers)[4],
+                     rownames(cluster5.markers)[5]))
+
+FeaturePlot(muscle.seurat,
+            features = "S100A9")
+
+#cluster 6
+cluster6.markers <- FindMarkers(muscle.seurat, 
+                                ident.1 = 6,
+                                logfc.threshold = 0.25, 
+                                test.use = "roc", 
+                                only.pos = TRUE)
+
+head(cluster6.markers,
+     n = 5)
+
+VlnPlot(muscle.seurat,
+        features = c(rownames(cluster6.markers)[1],
+                     rownames(cluster6.markers)[2],
+                     rownames(cluster6.markers)[3],
+                     rownames(cluster6.markers)[4],
+                     rownames(cluster6.markers)[5]))
+
+FeaturePlot(muscle.seurat,
+            features = "FCER1G")
+#cluster 7
+cluster7.markers <- FindMarkers(muscle.seurat, 
+                                ident.1 = 7,
+                                logfc.threshold = 0.25, 
+                                test.use = "roc", 
+                                only.pos = TRUE)
+
+head(cluster7.markers,
+     n = 5)
+
+VlnPlot(muscle.seurat,
+        features = c(rownames(cluster7.markers)[1],
+                     rownames(cluster7.markers)[2],
+                     rownames(cluster7.markers)[3],
+                     rownames(cluster7.markers)[4],
+                     rownames(cluster7.markers)[5]))
+
+FeaturePlot(muscle.seurat,
+            features = "RPS27")
+
+#cluster 8
+cluster8.markers <- FindMarkers(muscle.seurat, 
+                                ident.1 = 8,
+                                logfc.threshold = 0.25, 
+                                test.use = "roc", 
+                                only.pos = TRUE)
+
+VlnPlot(muscle.seurat,
+        features = c(rownames(cluster8.markers)[1]))
 
 #cluster 9 
 cluster9.markers <- FindMarkers(muscle.seurat, 
@@ -178,14 +310,28 @@ VlnPlot(muscle.seurat,
         features = "PROK2")
 which(rownames(cluster9.markers)=="PROK2")
 
-#cluster 8
-cluster8.markers <- FindMarkers(muscle.seurat, 
-                                ident.1 = 8,
-                                logfc.threshold = 0.25, 
-                                test.use = "roc", 
-                                only.pos = TRUE)
-VlnPlot(muscle.seurat,
-        features = c(rownames(cluster8.markers)[1],
-                     rownames(cluster8.markers)[2])) 
-head(cluster8.markers,
-     n = 20)
+#finding all markers
+muscle.allmarkers <- FindAllMarkers(muscle.seurat,
+                                    only.pos = T,
+                                    min.pct = 0.25,
+                                    logfc.threshold = 0.25)
+
+x <- muscle.allmarkers %>%
+  group_by(cluster) %>% #grouping by cluster
+  top_n(n = 1, wt = avg_log2FC) #visualized by the top gene based on logfc (i.e. higherst expressed gene)
+
+FeaturePlot(muscle.seurat,
+            features = x$gene)
+
+#cell annotation
+library(celldex)
+library(SingleR)
+
+FeaturePlot(muscle.seurat,
+            features = c("DCN",
+                         "ACTA2",
+                         "ACTA1",
+                         "APOE",
+                         "S100A9",
+                         "TYROBP",
+                         "RPS27"))
