@@ -54,7 +54,7 @@ Clustering of cells based on expression levels was performed and visualized usin
 #### 6. Marker Identification
 After clustering, to provide information about each cluster, we identify markers (expressed genes) that are charcteristic of a cluster. Markers for the cluster were identified and visualized with the top most expressed gene in each cluster as visualized below. 
 
-![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/bb12e6d3-f678-4ff3-b6b3-b71649091428)
+![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/4e89c43a-1680-41ce-bede-90f0b5237086)
 
 Individual cluster marker identification was also carried out since this was an exploratory project to unravel the diversity in the skeletal muscle cells. The plot below shows Decorin gene (DCN) as the top expressed in cluster 0. DCN encodes one of the proteins from the leucine-rich family of glycoproteins. 
 
@@ -71,7 +71,10 @@ Another characteristic cluster was the cluster 4 visualized in the two plot belo
 ![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/ad0983d1-11f4-47c9-9eb2-742ff05e0b6d)
 
 ### Manual Cell Type Annotation
-Due to the unavailability of a single-cell reference databse for skeletal muscles, manual cell type annotation was carried out through gene overlay plots and marker identification based on gene expression in cluster. This was then compared with and manually labelled using The Human Protein Atlas as the 
+Due to the unavailability of a single-cell reference databse for skeletal muscles, manual cell type annotation was carried out through gene overlay plots and marker identification based on gene expression in cluster. This was then compared with and manually labelled using The Human Protein Atlas as the reference database. 
+
+![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/3d3f002c-1ab0-4045-ad3d-fbdb691ac4e4)
+
 
 ### Conclusion
 Gene expression information for specific cell-types are important in understanding it in terms of the diversity of cell types that exist in samples, here skeletal muscles. This further helps us in the understanding and diagnosis of diseases and answer important molecular biology related questions.
