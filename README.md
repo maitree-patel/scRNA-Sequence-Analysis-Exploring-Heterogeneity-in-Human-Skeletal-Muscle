@@ -36,16 +36,14 @@ The plot shows the highly variable features in red with the top 10 features labe
 #### 4. Scaling Data
 Before going into dimensionality reduction (the next step) we scale the data to account for the variation by normalizing the mean expression to be 0 (with data points clustered around it which makes for a better visualization as well).
 
-#### 5. Linear Dimensionality Reduction
-Dimensionality reduction is an importnat part of scRNA-Seq analysis. Since we compare cells across multiple genes, we have a highly dimensional dataset. We therefore use dimensionality reduction method, here Principle Component Analysis (PCA), to reduce it to a low dimensional space. Our main aim is to account for as much variation as possible while reducing dimensionality, a part of which is selecting the number of Principle Components (axes that account for the variation in data) that account for the actual biological signal and not noise. The first PC produced by PCA accounts for the maximum variance and the next accounts for the remaining maximum variance and so on to give us multiple PCs which we visualize, asses and choose from for our analyses.
+#### 5. Dimensionality Reduction
+Dimensionality reduction is an importnat part of scRNA-Seq analysis. Since we compare thousands of cells across thousands of genes, we have a highly dimensional dataset. We therefore use dimensionality reduction methods, here Principle Component Analysis (PCA), to reduce it to a lower dimensional space. Our main aim is to account for as much variation (biological signal) as possible while reducing dimensionality.
 
 ![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/4fc83352-2b3f-4c9c-b9ad-a8b611041c52)
 
-From our PCA plot (using PC1 and PC2), we see 6 major groups just by eye. In order to select the number of PCs for our downstream analysis, we visualize the standard deviation for the PCs as attached below.
+From our PCA plot (using PC1 and PC2), we see 6 major groups just by eye. In order to select the number of PCs for our downstream analysis, we visualize the standard deviation or percent variance explained by each PC. The choice of number of PCs to include is made to maximize the variance explained and minimize dimensions. For this analysis, 20 PCs were included accounting.
 
 ![image](https://github.com/maitree-patel/scRNA-Sequence-Analysis-Exploring-Heterogeneity-in-Human-Skeletal-Muscle/assets/134908239/68d20c0d-16a3-44cf-9af8-a1e4a15d97c0)
-
-The plot shows us the amount of variance a PC accounts for. The more closer the data points, the more similar they are or the less variation they capture. So we want to select PCs post this curve starts to plateau. For our dataset we select all 1 to 20 PC. 
 
 #### 5. Clustering
 Clustering of cells based on expression levels was performed and visualized using PCA and UMAP respectively.
