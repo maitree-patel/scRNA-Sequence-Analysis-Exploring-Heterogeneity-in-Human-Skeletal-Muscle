@@ -2,7 +2,7 @@
 scRNA-Sequence Analysis was performed as a way to analyze the transcriptional profile of human skeletal muscles using Seurat package in R.
 
 ## Objective 
-scRNA-Sequencing differs from Bulk RNA Sequencing in providing a finer resolution of gene expression within cells enabling us to explore  the hetergeneity between cells. From analysing baseline transcriptome of the Human skeletal muscles (https://github.com/maitree-patel/RNASeq-Exploratory-Data-Analysis-of-Human-Skeletal-Muscles), scRNA-seq analysis was further used to expllore the single-cell transcriptome. The main aim was to understand the heterogeneity in Skeletal muscle cells by loading, pre-processing, clustering and marker identification from one sample from the study "Single-cell sequencing deconvolutes cellular responses to exercise in human skeletal muscle". 
+scRNA-Sequencing differs from Bulk RNA Sequencing in providing a finer resolution of gene expression within cells enabling us to explore  the hetergeneity between cells. From analysing baseline transcriptome of the Human skeletal muscles (https://github.com/maitree-patel/RNASeq-Exploratory-Data-Analysis-of-Human-Skeletal-Muscles), scRNA-seq analysis was further used to expllore the single-cell transcriptome. The main aim was to understand the heterogeneity in skeletal muscle cells by loading, pre-processing, clustering and marker identification from an individual sample from the study "Single-cell sequencing deconvolutes cellular responses to exercise in human skeletal muscle". 
 
 ## Data and Methodology
 scRNA-Sequence data was accessed through Gene Expression Omnibus (GEO) through accession number GSE214544. Data from an individual before exercising was used in this analysis to be consistent with analyzing baseline skeletal muscle. The data was analyzed in R using Seurat, SeuratDisk, Tidyverse and SingleR packages to meet the above mentioned objectives. The dataset consists of 21509 features and 15564 cells. The code has been made available as a part of this repository.
@@ -10,7 +10,7 @@ scRNA-Sequence data was accessed through Gene Expression Omnibus (GEO) through a
 ## Exploring Results
 ### Data Pre-processing
 #### 1. Quality Control
-The plot below shows the QC metrics for the filtered data. QC is performed to filter out low quality which include:
+The plot below shows the QC metrics for the filtered data. QC is performed to filter out low quality gene and cell counts which include:
 
 - Cells with low features
 - Cells with high percentage of mitochondrial transcript are indicative of dying or poor quality cells.
